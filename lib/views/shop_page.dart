@@ -63,7 +63,7 @@ const List<Entry> data = <Entry>[
   ]),
   Entry('Nigerian', null, null, <Entry>[
     Entry('Jumia', 'https://www.jumia.com.ng', 'jumia.png'),
-    Entry('Konga', 'https://www.konga.com', 'konga.png'),
+    Entry('Konga', 'https://www.konga.com', 'konga.png'), 
     Entry('Jiji', 'https://www.jiji.ng', 'jiji.png'),
   ])
 ];
