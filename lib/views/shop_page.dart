@@ -31,10 +31,8 @@ class _ShopPageState extends State<ShopPage> {
         title: Text('Shop All'),
       ),
       body: DoubleBackToCloseApp(
-        snackBar: const SnackBar(
-          content: Text('Tap back again to leave.')
-        ),
-              child: Container(
+        snackBar: const SnackBar(content: Text('Tap back again to leave.')),
+        child: Container(
             color: Colors.white,
             child: SingleChildScrollView(
                 child: Column(
@@ -79,13 +77,14 @@ class Data extends ChangeNotifier {
     url = newString;
     notifyListeners();
   }
-  void changeTitle(String newString){
+
+  void changeTitle(String newString) {
     title = newString;
     notifyListeners();
   }
-  void changeLogo(String newString){
+
+  void changeLogo(String newString) {
     logo = newString;
     notifyListeners();
   }
-  
 }
