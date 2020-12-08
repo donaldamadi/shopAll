@@ -128,6 +128,7 @@ const List<Entry> lifestyleData = <Entry>[
   Entry('Men\'s wear', null, null, <Entry>[
     Entry('Dex Stitches', 'https://dexstitches.com/men-fashion-shop-nigeria', 'dexstitches.jpg'),
     Entry('Obeezi', 'https://www.obeezi.com/', 'obeezi.png'),
+    Entry('Obeezi', 'https://www.obeezi.com/', 'obeezi.png'),
   ]),
   Entry('Women\'s wear', null, null, <Entry>[
     Entry('PayPorte', 'https://payporte.com/', 'payporte.png'),

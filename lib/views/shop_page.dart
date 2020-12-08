@@ -45,8 +45,7 @@ class _ShopPageState extends State<ShopPage> {
                       itemBuilder: (BuildContext context, int index) =>
                           EntryItem(data[index]),
                       itemCount: data.length,
-                    ),
-                  ),
+                    )),
                 )
               ],
             ))),
