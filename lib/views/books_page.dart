@@ -94,7 +94,7 @@ const List<Entry> booksData = <Entry>[
     Entry('Amazon', 'https://www.amazon.com', 'amazon.png'),
   ]),
   Entry('Novels', null, null, <Entry>[
-    Entry('Jumia', 'https://www.jumia.com.ng', 'jumia.png'),
+    Entry('PDF Drive', 'https://www.pdfdrive.com/', 'pdfdrive.png'),
   ]),
   Entry('African Literature', null, null, <Entry>[
     Entry('Jumia', 'https://www.jumia.com.ng', 'jumia.png'),
