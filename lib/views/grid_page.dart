@@ -51,7 +51,11 @@ class GridPage extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.all(20.0),
           child: GridView.count(
+            childAspectRatio: 1.0,
             crossAxisCount: 2,
+            padding: EdgeInsets.all(4),
+            mainAxisSpacing: 20,
+            crossAxisSpacing: 20,
             children: List.generate(choices.length, (index) {
               return Center(
                 child: GridCard(choice: choices[index]),

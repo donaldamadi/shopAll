@@ -13,11 +13,13 @@ class GridCard extends StatelessWidget {
         Navigator.pushNamed(context, '${choice.route}');
       },
       child: Card(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
+        elevation: 5,
         child: Container(
           child: Stack(children: [
             Container(
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(4),
+                  borderRadius: BorderRadius.circular(20),
                   image: DecorationImage(
                     image: AssetImage('assets/grid_images/${choice.image}'),
                     fit: BoxFit.fill,
@@ -26,7 +28,7 @@ class GridCard extends StatelessWidget {
             ),
             Container(
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(8),
+                borderRadius: BorderRadius.circular(20),
                 color: Colors.black26,
               ),
               alignment: Alignment.center,
