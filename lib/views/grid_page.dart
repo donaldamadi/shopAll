@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:shop_all/grid_card.dart';
 import 'package:double_back_to_close_app/double_back_to_close_app.dart';
+import 'package:shop_all/views/cars_page.dart';
+import 'package:shop_all/views/lifestyle_page.dart';
 
 class GridPage extends StatelessWidget {
   @override
@@ -8,7 +10,41 @@ class GridPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('ShopAll'),
-        
+      ),
+      drawer: Drawer(
+        child: ListView(
+          children: [
+            UserAccountsDrawerHeader(
+              accountName: Text('Obinna Amadi'),
+              accountEmail: Text('donaldamadi15@gmail.com'),
+              currentAccountPicture: GestureDetector(
+                onTap: () {
+                  print('Hey');
+                },
+                child: CircleAvatar(
+                  backgroundColor: Colors.white,
+                  child: Text('D', style: TextStyle(fontSize: 40)),
+                ),
+              ),
+            ),
+            ListTile(
+              title: Text('Fashion Page'),
+              onTap: () {
+                Navigator.of(context).pop();
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (BuildContext context) => LifeStylePage()));
+              },
+            ),
+            ListTile(
+              title: Text('Cars Page'),
+              onTap: () {
+                Navigator.of(context).pop();
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (BuildContext context) => CarsPage()));
+              },
+            ),
+          ],
+        ),
       ),
       body: DoubleBackToCloseApp(
         snackBar: const SnackBar(content: Text('Press back again to leave.')),
@@ -45,6 +81,8 @@ const List<Choice> choices = const [
       title: 'Appliances', image: 'appliances.jpg', route: '/appliances'),
   const Choice(title: 'Cars', image: 'cars.jpg', route: '/cars'),
   const Choice(title: 'Furniture', image: 'furniture.jpg', route: '/furniture'),
-  const Choice(title: 'Real Estate', image: 'real-estate.jpg', route: '/realEstate'),
-  const Choice(title: 'My Collection', image: 'mycollection.png', route: '/realEstate'),
+  const Choice(
+      title: 'Real Estate', image: 'real-estate.jpg', route: '/realEstate'),
+  const Choice(
+      title: 'My Collection', image: 'mycollection.png', route: '/realEstate'),
 ];

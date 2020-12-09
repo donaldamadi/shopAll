@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
               debugShowCheckedModeBanner: false,
               title: 'Flutter Demo',
               theme: ThemeData(
-                primarySwatch: Colors.blue,
+                primaryColor: Colors.white,
               ),
               // home: ShopPage(),
               routes: <String, WidgetBuilder>{
