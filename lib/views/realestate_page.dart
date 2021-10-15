@@ -90,6 +90,6 @@ class _RealEstatePageState extends State<RealEstatePage> {
   }
 }
 
-const List<Entry> estateData = <Entry>[
+List<Entry> estateData = <Entry>[
   Entry('Slot', 'https://slot.ng', 'none.png')
 ];

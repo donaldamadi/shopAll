@@ -89,7 +89,7 @@ class _BooksPageState extends State<BooksPage> {
   }
 }
 
-const List<Entry> booksData = <Entry>[
+List<Entry> booksData = <Entry>[
   Entry('Comics', null, null, <Entry>[
     Entry('Amazon', 'https://www.amazon.com', 'amazon.png'),
   ]),

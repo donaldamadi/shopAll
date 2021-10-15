@@ -91,7 +91,7 @@ class _LifeStylePageState extends State<LifeStylePage> {
   }
 }
 
-const List<Entry> lifestyleData = <Entry>[
+List<Entry> lifestyleData = <Entry>[
   Entry('FootWear', null, null, <Entry>[
     Entry('Amazon', 'https://www.amazon.com', 'amazon.png'),
     Entry('Keexs', 'https://keexs.com', 'keexs.png'),
@@ -140,7 +140,7 @@ const List<Entry> lifestyleData = <Entry>[
   ]),
   Entry('Kiddies wear', null, null, <Entry>[
     Entry('Amazon', 'https://www.amazon.com', 'amazon.png'),
-  ]),
+  ]), 
   Entry('Skin & Hair care', null, null, <Entry>[
     Entry('Amazon', 'https://www.amazon.com', 'amazon.png'),
   ]),

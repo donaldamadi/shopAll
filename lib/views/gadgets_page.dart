@@ -90,7 +90,7 @@ class _GadgetPageState extends State<GadgetPage> {
   }
 }
 
-const List<Entry> gadgetsData = <Entry>[
+ List<Entry> gadgetsData = <Entry>[
   Entry('Computer Village NG', 'https://computervillage.ng/', 'computer-village.png'),
   Entry('Slot', 'https://slot.ng', 'slot.png'),
   Entry('iStore', 'https://myistore.com.ng/', 'iStore.png'),

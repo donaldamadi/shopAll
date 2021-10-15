@@ -90,7 +90,7 @@ class _FurniturePageState extends State<FurniturePage> {
   }
 }
 
-const List<Entry> furnitureData = <Entry>[
+List<Entry> furnitureData = <Entry>[
   Entry('WayFair', 'https://www.wayfair.com/furniture/cat/furniture-c45974.html', 'wayfair.jpg'),
   Entry('Red Violet', 'https://www.redviolet.com.ng/', 'redviolet.png'),
   Entry('Office Everything', 'https://www.officeeverything.com.ng/', 'office-everything.jpg'),

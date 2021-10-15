@@ -54,7 +54,7 @@ class _ShopPageState extends State<ShopPage> {
   }
 }
 
-const List<Entry> data = <Entry>[
+List<Entry> data = <Entry>[
   Entry('Foreign', null, null, <Entry>[
     Entry('Amazon', 'https://www.amazon.com', 'amazon.png'),
     Entry('Ali Express', 'https://www.aliexpress.com', 'ali-express.png'),
@@ -67,23 +67,4 @@ const List<Entry> data = <Entry>[
   ])
 ];
 
-class Data extends ChangeNotifier {
-  String url = 'https://www.google.com';
-  String title = 'WebView';
-  String logo = 'none.png';
 
-  void changeUrl(String newString) {
-    url = newString;
-    notifyListeners();
-  }
-
-  void changeTitle(String newString) {
-    title = newString;
-    notifyListeners();
-  }
-
-  void changeLogo(String newString) {
-    logo = newString;
-    notifyListeners();
-  }
-}

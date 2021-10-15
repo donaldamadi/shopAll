@@ -90,6 +90,6 @@ class _CarsPageState extends State<CarsPage> {
   }
 }
 
-const List<Entry> carsData = <Entry>[
+List<Entry> carsData = <Entry>[
   Entry('Cars45', 'https://www.cars45.com', 'none.png')
 ];

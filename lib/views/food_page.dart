@@ -11,13 +11,13 @@ class FoodPage extends StatefulWidget {
 class _FoodPageState extends State<FoodPage> {
   final webView = FlutterWebviewPlugin();
   TextEditingController searchController = TextEditingController();
-  var items = List<Entry>();
+  var items = <Entry>[];
 
   void filterSearchResults(String query) {
-    List<Entry> dummySearchList = List<Entry>();
+    List<Entry> dummySearchList = <Entry>[];
     dummySearchList.addAll(foodData);
     if (query.isNotEmpty) {
-      List<Entry> dummyListData = List<Entry>();
+      List<Entry> dummyListData = <Entry>[];
       dummySearchList.forEach((item) {
         if (item.title.contains(query)) {
           dummyListData.add(item);
@@ -90,12 +90,12 @@ class _FoodPageState extends State<FoodPage> {
   }
 }
 
-const List<Entry> foodData = <Entry>[
+List<Entry> foodData = <Entry>[
   Entry('Food', null, null, <Entry>[
     Entry('Amazon', 'https://www.amazon.com', 'amazon.png'),
   ]),
   Entry('Groceries', null, null, <Entry>[
-    Entry('Market Square', 'https://marketsquareng.com/', 'market-square.png'),
+    Entry('Market Square', 'https://marketsquareng.com/', 'market-square.png',),
     Entry('The Market Food Shop', 'https://www.themarketfoodshop.com/', 'market-foodshop.jpg'),
     Entry('Supermart.ng', 'https://www.supermart.ng/', 'supermart.png'),
     Entry('Food Locker', 'https://www.foodlocker.com.ng/', 'foodlocker.png'),

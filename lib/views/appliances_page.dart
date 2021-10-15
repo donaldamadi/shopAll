@@ -90,6 +90,6 @@ class _AppliancesPageState extends State<AppliancesPage> {
   }
 }
 
-const List<Entry> appliancesData = <Entry>[
+List<Entry> appliancesData = <Entry>[
   Entry('Alabamart', 'https://www.alabamart.com', 'none.png')
 ];

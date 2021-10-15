@@ -1,5 +1,11 @@
+import 'dart:io';
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';
+import 'package:shop_all/entry.dart';
+import 'package:shop_all/entry_item.dart';
+import 'package:shop_all/favorite_model.dart';
 import 'package:shop_all/views/appliances_page.dart';
 import 'package:shop_all/views/books_page.dart';
 import 'package:shop_all/views/cars_page.dart';
@@ -9,14 +15,23 @@ import 'package:shop_all/views/gadgets_page.dart';
 import 'package:shop_all/views/grid_page.dart';
 import 'views/lifestyle_page.dart';
 import 'package:shop_all/views/realestate_page.dart';
-import 'package:shop_all/views/shop_page.dart';
 import 'package:provider/provider.dart';
+import 'package:path_provider/path_provider.dart' as pathProvider;
+import 'package:hive/hive.dart';
 
-void main() {
+Future<void> main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  Directory directory = await pathProvider.getApplicationDocumentsDirectory();
+  Hive.init(directory.path);
+  Hive.registerAdapter(FavoriteAdapter());
+
   runApp(MyApp());
 }
 
 final FlutterWebviewPlugin webviewPlugin = new FlutterWebviewPlugin();
+const List<Entry> favoriteData = <Entry>[];
+
+
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
@@ -42,7 +57,6 @@ class MyApp extends StatelessWidget {
                 '/cars': (_) => CarsPage(),
                 '/furniture': (_) => FurniturePage(),
                 '/realEstate': (_) => RealEstatePage(),
-                // '/gridPage': (_) => GridPage(),
                 'webView': (context) => WebviewScaffold(
                       url: Provider.of<Data>(context).url,
                       appBar: AppBar(
@@ -61,7 +75,6 @@ class MyApp extends StatelessWidget {
                             ),
                             onPressed: () {
                               webviewPlugin.hide();
-                              // Navigator.pop(context);
                               return showDialog<void>(
                                   context: context,
                                   barrierDismissible: false,
@@ -70,14 +83,14 @@ class MyApp extends StatelessWidget {
                                       title: Text('Back?'),
                                       content: Text('Go Back to main Page?'),
                                       actions: [
-                                        FlatButton(
+                                        TextButton(
                                           child: Text('No'),
                                           onPressed: () {
                                             Navigator.pop(context);
                                             webviewPlugin.show();
                                           },
                                         ),
-                                        FlatButton(
+                                        TextButton(
                                           child: Text('Yes'),
                                           onPressed: () {
                                             Navigator.pop(context);
@@ -99,19 +112,3 @@ class MyApp extends StatelessWidget {
         });
   }
 }
-
-// actions: [
-//           PopupMenuButton(
-//             itemBuilder: (context) => [
-//               PopupMenuItem(
-//                 value: 1,
-//                 child: Row(children: [
-//                   Padding(
-//                     padding: EdgeInsets.fromLTRB(2, 2, 8, 2),
-//                     child: Icon()
-//                   )
-//                 ],),
-//               )
-//             ],
-//           ),
-//         ],
