@@ -2,10 +2,10 @@ class Entry {
   Entry(this.title, [this.url, this.asset, this.children = const <Entry>[], this.saved = false, this.id]);
   final String title;
   final List<Entry> children;
-  final String url;
-  final String asset;
+  final String? url;
+  final String? asset;
   bool saved;
-  final int id;
+  final int? id;
 
   // Map<String, dynamic> toMap(){
   //   return {

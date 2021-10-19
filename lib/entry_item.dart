@@ -75,12 +75,12 @@ class _EntryItemState extends State<EntryItem> {
 }
 
 class Data extends ChangeNotifier {
-  String url = 'https://www.google.com';
+  String? url = 'https://www.google.com';
   String title = 'WebView';
-  String logo = 'none.png';
+  String? logo = 'none.png';
   bool saved = true;
 
-  void changeUrl(String newString) {
+  void changeUrl(String? newString) {
     url = newString;
     notifyListeners();
   }
@@ -90,7 +90,7 @@ class Data extends ChangeNotifier {
     notifyListeners();
   }
 
-  void changeLogo(String newString) {
+  void changeLogo(String? newString) {
     logo = newString;
     notifyListeners();
   }

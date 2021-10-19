@@ -71,9 +71,9 @@ class GridPage extends StatelessWidget {
 class Choice {
   const Choice({this.title, this.image, this.route});
 
-  final String title;
-  final String image;
-  final String route;
+  final String? title;
+  final String? image;
+  final String? route;
 }
 
 const List<Choice> choices = const [

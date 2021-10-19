@@ -11,13 +11,13 @@ class BooksPage extends StatefulWidget {
 class _BooksPageState extends State<BooksPage> {
   final webView = FlutterWebviewPlugin();
   TextEditingController searchController = TextEditingController();
-  var items = List<Entry>();
+  var items = [];
 
   void filterSearchResults(String query) {
-  List<Entry> dummySearchList = List<Entry>();
+  List<Entry> dummySearchList = [];
   dummySearchList.addAll(booksData);
   if(query.isNotEmpty) {
-    List<Entry> dummyListData = List<Entry>();
+    List<Entry> dummyListData = [];
     dummySearchList.forEach((item) {
       if(item.title.contains(query)) {
         dummyListData.add(item);

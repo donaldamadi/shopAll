@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:shop_all/views/grid_page.dart';
 
 class GridCard extends StatelessWidget {
-  const GridCard({Key key, this.choice}) : super(key: key);
+  const GridCard({Key? key, this.choice}) : super(key: key);
 
-  final Choice choice;
+  final Choice? choice;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.pushNamed(context, '${choice.route}');
+        Navigator.pushNamed(context, '${choice!.route}');
       },
       child: Card(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
@@ -21,7 +21,7 @@ class GridCard extends StatelessWidget {
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
                   image: DecorationImage(
-                    image: AssetImage('assets/grid_images/${choice.image}'),
+                    image: AssetImage('assets/grid_images/${choice!.image}'),
                     fit: BoxFit.fill,
                     alignment: Alignment.topCenter,
                   )),
@@ -36,7 +36,7 @@ class GridCard extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      choice.title,
+                      choice!.title!,
                       style: TextStyle(fontSize: 20, color: Colors.white),
                     )
                   ]),
