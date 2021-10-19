@@ -5,16 +5,16 @@ part 'favorite_model.g.dart'; // Name of the TypeAdapter we will generate in the
 @HiveType(typeId: 0)
 class Favorite extends HiveObject{
   @HiveField(0)
-  String name;
+  String? name;
 
   @HiveField(1)
-  bool isFavorited;
+  bool? isFavorited;
 
   @HiveField(2)
-  String url;
+  String? url;
 
   @HiveField(3)
-  String logo;
+  String? logo;
 
   Favorite({this.name, this.isFavorited, this.url, this.logo});
 }

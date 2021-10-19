@@ -58,7 +58,7 @@ class MyApp extends StatelessWidget {
                 '/furniture': (_) => FurniturePage(),
                 '/realEstate': (_) => RealEstatePage(),
                 'webView': (context) => WebviewScaffold(
-                      url: Provider.of<Data>(context).url,
+                      url: Provider.of<Data>(context).url!,
                       appBar: AppBar(
                         leading: Padding(
                           padding: const EdgeInsets.all(8.0),
@@ -73,7 +73,7 @@ class MyApp extends StatelessWidget {
                             icon: Icon(
                               Icons.close,
                             ),
-                            onPressed: () {
+                            onPressed: () async{
                               webviewPlugin.hide();
                               return showDialog<void>(
                                   context: context,

@@ -11,13 +11,13 @@ class LifeStylePage extends StatefulWidget {
 class _LifeStylePageState extends State<LifeStylePage> {
   final webView = FlutterWebviewPlugin();
   TextEditingController searchController = TextEditingController();
-  var items = List<Entry>();
+  var items = [];
 
   void filterSearchResults(String query) {
-  List<Entry> dummySearchList = List<Entry>();
+  List<Entry> dummySearchList = [];
   dummySearchList.addAll(lifestyleData);
   if(query.isNotEmpty) {
-    List<Entry> dummyListData = List<Entry>();
+    List<Entry> dummyListData = [];
     dummySearchList.forEach((item) {
       if(item.title.contains(query)) {
         dummyListData.add(item);
